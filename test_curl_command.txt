@@ -1,0 +1,11 @@
+curl -X POST https://simple-cloud-run-function-715970340101.us-central1.run.app \
+-H "Authorization: bearer $(gcloud auth print-identity-token)" \
+-H "Content-Type: application/json" \
+-d '{
+  "customer_name": "Alice",
+  "travel_date": "2025-05-15",
+  "origin": "BOM",
+  "destination": "DEL",
+  "passengers": 2,
+  "trip_type": "round_trip"
+}'
